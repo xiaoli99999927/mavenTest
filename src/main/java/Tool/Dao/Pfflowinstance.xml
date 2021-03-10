@@ -1,0 +1,9 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Tool.Dao.PfflowinstanceDao">
+    <select id="getAll" parameterType="java.lang.String" resultType="Tool.Pojo.Pfflowinstance" >
+        select * from PFFLOWINSTANCE where PFFLOWINSTANCE.title like #{guanjianzi} order by PFFLOWINSTANCE.starttime desc
+    </select>
+</mapper>

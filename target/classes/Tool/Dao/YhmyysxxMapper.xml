@@ -1,0 +1,34 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Tool.Dao.YhmyysxxDao">
+        <select id="getDataList" parameterType="java.lang.String" resultType="Tool.Pojo.Yhmyysxx" >
+            SELECT
+                yhmyysxx.I_ID,
+                yhmyysxx.YHXM,
+                yhmyysxx.YHGMSFHM,
+                yhmyysxx.YSDZ,
+                yhmyysxx.jfyhkh,
+                yhmyysxx.jfje,
+                yhmyysxx.jfrq,
+                yhmyysxx.jfqs,
+                yhmyysxx.ysl,
+                yhmyysxx.ysltjrq,
+                yhmyysxx.qhdm,
+                yhmyysxx.s_createtime,
+                yhmyysxx.s_last_updatetime
+            FROM
+                yhmyysxx
+            where ysdz like concat('%',#{ysdz},'%')
+        </select>
+    <select id="getAll" resultType="Tool.Pojo.Yhmyysxx" >
+        SELECT
+            *
+        FROM
+            yhmyysxx
+        limit 100
+    </select>
+
+
+</mapper>

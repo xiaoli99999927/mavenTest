@@ -1,0 +1,15 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>SpringBoot模版渲染</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+</head>
+<body>
+<table border="1">
+    <tr th:each="stringLongEntry:${newRrList}">
+        <td th:text="${stringLongEntry.getKey()}"></td>
+        <td th:text="${stringLongEntry.getValue()}"></td>
+    </tr>
+</table>
+</body>
+</html>

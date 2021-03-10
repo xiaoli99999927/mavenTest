@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>SpringBoot模版渲染</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+</head>
+<body>
+<table border="1">
+    <tr th:each="record:${rrList}">
+        <td th:text="${record.gwid}"></td>
+        <td th:text="${record.faqi}"></td>
+        <td th:text="${record.jieshou}"></td>
+        <td th:text="${record.docname}"></td>
+        <td th:text="${record.leixing}"></td>
+        <td th:text="${record.shifouyijieshou}"></td>
+        <td th:text="${record.jieshouzhunagtai}"></td>
+        <td th:text="${record.jieshoushijian}"></td>
+    </tr>
+</table>
+
+<form action="/excel" method="post">
+    <input type="submit" value="一键生成excel" />
+</form>
+
+
+</body>
+</html>
